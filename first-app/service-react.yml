@@ -1,1 +1,10 @@
-ee
+apiVersion: v1
+kind: Service
+metadata:
+  name: first-react-app
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: first-react-app
