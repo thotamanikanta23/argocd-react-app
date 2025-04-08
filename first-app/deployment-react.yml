@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: first-react-app
+  name: first-app
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: first-react-app
+      app: first-app
   template:
     metadata:
       labels:
-        app: first-react-app
+        app: first-app
     spec:
       containers:
-      - image: thotamanikanta23/my-node-app:0bd0c85427626450e785e71d1b3f63927fdaf2af
-        name: first-react-app
+      - image: thotamanikanta23/nginx:2.0
+        name: first-app
         ports:
         - containerPort: 80
